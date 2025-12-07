@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Mobil Saya</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Mobil - papaindiansierra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        .car-card {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+        .car-card img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .specs {
+            background: #eef2ff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #555;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Review Mobil yang Pernah Saya Gunakan</h1>
-        <p>Referensi untuk kamu yang ingin membeli mobil 🚗</p>
-    </header>
 
-    <div class="container" id="mobil-list">
-        <!-- Mobil akan dimasukkan via JavaScript -->
+<body>
+    <h1>Review Mobil yang Pernah Saya Gunakan 🚗</h1>
+    <p style="text-align:center;">Referensi bagi kamu yang ingin membeli mobil</p>
+
+    <!-- Mobil 1 -->
+    <div class="car-card">
+        <h2>Honda Freed GB3 (2011)</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Honda_Freed_GB3_001.JPG" alt="Honda Freed">
+        <p>MPV nyaman dengan pintu sliding, sangat cocok keluarga. Kabin lega dan fitur oke untuk mobil tahun segini.</p>
+        <div class="specs">
+            <b>Spesifikasi Singkat:</b>
+            <ul>
+                <li>Mesin: 1.5L i-VTEC</li>
+                <li>Transmisi: CVT</li>
+                <li>Tenaga: ±118 HP</li>
+                <li>Konsumsi BBM: 10–13 km/l</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mobil 2 -->
+    <div class="car-card">
+        <h2>Toyota Avanza (2015)</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/2015_Toyota_Avanza_1.3_G_(F_653RM)_wagon_(2016-04-07)_01.jpg" alt="Toyota Avanza">
+        <p>Mobil sejuta umat. Irit dan sparepart murah. Nyaman untuk perjalanan harian.</p>
+        <div class="specs">
+            <b>Spesifikasi Singkat:</b>
+            <ul>
+                <li>Mesin: 1.3L Dual VVT-i</li>
+                <li>Transmisi: Manual/AT</li>
+                <li>Tenaga: ±95 HP</li>
+                <li>Konsumsi BBM: 12–15 km/l</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mobil 3 -->
+    <div class="car-card">
+        <h2>Daihatsu Xenia (2014)</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/2014_Daihatsu_Xenia_1.3_X_(F_653RM)_wagon_(2017-11-04)_01.jpg" alt="Daihatsu Xenia">
+        <p>Pilihan lain dari Avanza. Kapasitas banyak dan biaya perawatan terjangkau.</p>
+        <div class="specs">
+            <b>Spesifikasi Singkat:</b>
+            <ul>
+                <li>Mesin: 1.3L</li>
+                <li>Tenaga: ±92 HP</li>
+                <li>Penggerak: RWD</li>
+                <li>BBM: 11–14 km/l</li>
+            </ul>
+        </div>
     </div>
 
     <footer>
-        <p>©2025 papaindiansierra | Pengalaman Mobil Pribadi</p>
+        ©2025 papaindiansierra | Pengalaman Mobil Pribadi
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
