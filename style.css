@@ -1,36 +1,90 @@
+/* Warna dasar website */
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background: #f5f5f5;
+    background: #0b0c10;
+    color: #e6e6e6;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header elegan */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #111217;
+    border-bottom: 2px solid #d4af37;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cfcfcf;
+    font-size: 16px;
+}
+
+/* Layout card mobil */
 .mobil-list {
+    padding: 30px;
     display: grid;
-    gap: 20px;
+    gap: 25px;
+    max-width: 700px;
+    margin: auto;
 }
 
+/* Card styling */
 .mobil-card {
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #16181f;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #2f3137;
+    transition: 0.3s;
 }
 
-.mobil-card button {
-    margin-top: 10px;
-    padding: 8px 12px;
+.mobil-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+}
+
+/* Tombol elegan */
+button {
+    background: #d4af37;
+    color: #0b0c10;
+    padding: 10px 14px;
     border: none;
-    background: #0057ff;
-    color: white;
     border-radius: 6px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
-/* DETAIL HARUS TERSEMBUNYI SEBELUM DIKLIK */
+button:hover {
+    background: #b6912b;
+}
+
+/* Detail spesifikasi */
 .detail {
+    background: #1d1f27;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
     display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background: #eef3ff;
-    border-radius: 6px;
+    border-left: 3px solid #d4af37;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111217;
+    color: #777;
+    margin-top: 40px;
+    font-size: 14px;
 }
