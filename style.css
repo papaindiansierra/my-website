@@ -26,6 +26,7 @@ body {
     cursor: pointer;
 }
 
+/* DETAIL HARUS TERSEMBUNYI SEBELUM DIKLIK */
 .detail {
     display: none;
     margin-top: 10px;
