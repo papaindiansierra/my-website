@@ -35,67 +35,58 @@ header p {
     margin: auto;
 }
 
-/* Card styling + animasi border */
+/* Card styling */
 .mobil-card {
-    position: relative;
     background: #16181f;
     padding: 20px;
     border-radius: 12px;
+    border: 1px solid #2f3137;
     transition: 0.3s;
-    overflow: hidden;
 }
 
-/* Styling gambar mobil */
-.mobil-img {
-    width: 100%;
-    height: 250px; /* sesuaikan tinggi sesuai selera */
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
-    margin-bottom: 12px;
-}
-
-/* Border animasi */
-.mobil-card::before {
-    content: "";
-    position: absolute;
-    inset: -3px;
-    padding: 2px;
-    border-radius: inherit;
-    background: conic-gradient(#d4af37, transparent, #d4af37);
-    animation: borderSpin 2.5s linear infinite;
-    z-index: 0;
-    mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-    mask-composite: xor;
-}
-
-/* Lapisan gelap agar isi card tetap fokus */
-.mobil-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #16181f;
-    border-radius: inherit;
-    z-index: 1;
-}
-
-/* Supaya konten card berada di atas */
-.mobil-card * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Hover animasi */
 .mobil-card:hover {
+    border-color: #d4af37;
     transform: translateY(-3px);
 }
 
-/* Animasi border berputar */
-@keyframes borderSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Tombol elegan */
+button {
+    background: #d4af37;
+    color: #0b0c10;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #b6912b;
+}
+
+/* Detail spesifikasi */
+.detail {
+    background: #1d1f27;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    display: none;
+    border-left: 3px solid #d4af37;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111217;
+    color: #777;
+    margin-top: 40px;
+    font-size: 14px;
 }
 
 /* Tombol elegan */
@@ -145,6 +136,7 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
 
 
 
