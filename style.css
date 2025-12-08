@@ -35,48 +35,19 @@ header p {
     margin: auto;
 }
 
+/* Card styling */
 .mobil-card {
-    position: relative;
     background: #16181f;
     padding: 20px;
     border-radius: 12px;
-    overflow: hidden;
+    border: 1px solid #2f3137;
     transition: 0.3s;
 }
 
-/* Border animasi berjalan */
-.mobil-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    background: conic-gradient(#d4af37 0deg, #b6912b 90deg, transparent 180deg);
-    animation: spin-border 3s linear infinite paused;
-    transform-origin: center;
-    z-index: 0;
+.mobil-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
 }
-
-/* Saat hover animasi jalan */
-.mobil-card:hover::before {
-    animation-play-state: running;
-}
-
-/* Konten tetap di atas border */
-.mobil-card > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Animasi berputar mengelilingi border */
-@keyframes spin-border {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 
 /* Tombol elegan */
 button {
@@ -117,6 +88,3 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
-
-
-
