@@ -49,14 +49,16 @@ header p {
 .mobil-card::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    background: linear-gradient(120deg, transparent, #d4af37, transparent);
+    inset: -3px;
+    padding: 2px;
     border-radius: inherit;
-    animation: borderMove 2.5s linear infinite;
-    pointer-events: none;
+    background: conic-gradient(#d4af37, transparent, #d4af37);
+    animation: borderSpin 2.5s linear infinite;
+    z-index: 0;
+    mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    mask-composite: xor;
 }
 
 /* Lapisan gelap agar isi card tetap fokus */
@@ -81,7 +83,7 @@ header p {
 }
 
 /* Animasi border berputar */
-@keyframes borderMove {
+@keyframes borderSpin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
@@ -133,3 +135,4 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
