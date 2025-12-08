@@ -36,17 +36,43 @@ header p {
 }
 
 /* Card styling */
+/* Card styling dengan animasi border */
 .mobil-card {
+    position: relative;
     background: #16181f;
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid #2f3137;
+    border: none;
+    overflow: hidden;
     transition: 0.3s;
 }
 
-.mobil-card:hover {
-    border-color: #d4af37;
-    transform: translateY(-3px);
+.mobil-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #d4af37, #b6912b, #d4af37, #b6912b);
+    background-size: 300% 300%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: border-anim 4s linear infinite;
+}
+
+.mobil-card:hover::before {
+    opacity: 1;
+}
+
+.mobil-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes border-anim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 200% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Tombol elegan */
@@ -88,3 +114,4 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
