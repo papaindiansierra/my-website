@@ -21,7 +21,7 @@ header {
     position: absolute;
     top: 10px;
     left: 20px;
-    width: 90px;
+    width: 95px;
     height: auto;
     border-radius: 6px;
 }
@@ -127,5 +127,6 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
 
 
