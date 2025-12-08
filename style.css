@@ -35,4 +35,101 @@ header p {
     margin: auto;
 }
 
-/* Card styling + animasi bor*
+/* Card styling + animasi border */
+.mobil-card {
+    position: relative;
+    background: #16181f;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+/* Border animasi */
+.mobil-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(120deg, transparent, #d4af37, transparent);
+    border-radius: inherit;
+    animation: borderMove 2.5s linear infinite;
+    pointer-events: none;
+}
+
+/* Lapisan gelap agar isi card tetap fokus */
+.mobil-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #16181f;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+/* Supaya konten card berada di atas */
+.mobil-card * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover animasi */
+.mobil-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Animasi border berputar */
+@keyframes borderMove {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tombol elegan */
+button {
+    background: #d4af37;
+    color: #0b0c10;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+button:hover {
+    background: #b6912b;
+}
+
+/* Detail spesifikasi */
+.detail {
+    background: #1d1f27;
+    margin-top: 15px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border-left: 3px solid #d4af37;
+
+    /* Animasi */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+/* Saat aktif */
+.detail.show {
+    max-height: 200px; /* Sesuaikan jika lebih tinggi */
+    opacity: 1;
+    padding: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111217;
+    color: #777;
+    margin-top: 40px;
+    font-size: 14px;
+}
