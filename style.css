@@ -7,18 +7,20 @@ body {
     padding: 0;
 }
 
-/* Header elegan dengan logo */
+/* Header elegan + logo kiri + teks tetap di tengah */
 header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 25px 35px;
+    position: relative;
+    padding: 40px 20px;
     background: #111217;
     border-bottom: 2px solid #d4af37;
+    text-align: center;
 }
 
-/* Logo header */
+/* Logo header kiri atas */
 .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
     width: 55px;
     height: auto;
     border-radius: 6px;
