@@ -48,7 +48,7 @@ header p {
 /* Styling gambar mobil */
 .mobil-img {
     width: 100%;
-    height: 200px; /* sesuaikan tinggi sesuai selera */
+    height: 250px; /* sesuaikan tinggi sesuai selera */
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
@@ -145,5 +145,6 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
 
 
