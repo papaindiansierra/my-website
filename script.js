@@ -1,6 +1,6 @@
 function toggleDetail(id) {
     const detail = document.getElementById(`detail-${id}`);
-    const button = detail.previousElementSibling; // tombol adalah elemen sebelum detail
+    const button = detail.previousElementSibling;
 
     detail.classList.toggle("show");
 
