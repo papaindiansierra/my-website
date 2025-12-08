@@ -5,8 +5,9 @@ function toggleDetail(id) {
     detail.classList.toggle("show");
 
     if (detail.classList.contains("show")) {
-        button.innerHTML = "Hide Detail ▲";
+        button.innerHTML = "Hide Detail";
     } else {
-        button.innerHTML = "Detail Information ▼";
+        button.innerHTML = "Show Detail Information";
     }
 }
+
