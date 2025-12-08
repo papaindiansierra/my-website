@@ -1,4 +1,12 @@
 function toggleDetail(id) {
     const detail = document.getElementById(`detail-${id}`);
+    const button = detail.previousElementSibling; // tombol adalah elemen sebelum detail
+
     detail.classList.toggle("show");
+
+    if (detail.classList.contains("show")) {
+        button.innerHTML = "Hide Detail ▲";
+    } else {
+        button.innerHTML = "Detail Information ▼";
+    }
 }
