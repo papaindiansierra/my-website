@@ -35,34 +35,59 @@ header p {
     margin: auto;
 }
 
-/* Card styling */
+/* Card styling dengan animasi border */
 .mobil-card {
+    position: relative;
     background: #16181f;
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid #2f3137;
     transition: 0.3s;
+    overflow: hidden; /* supaya garis tidak keluar */
 }
 
+/* Border animasi */
+.mobil-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(120deg, transparent, #d4af37, transparent);
+    border-radius: inherit;
+    animation: borderMove 2.5s linear infinite;
+    pointer-events: none;
+}
+
+/* Background clip agar bagian tengah tetap gelap */
+.mobil-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #16181f;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+/* Isi card tetap berada di atas */
+.mobil-card * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animasi bergerak mengelilingi kotak */
+@keyframes borderMove {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hover sedikit terangkat */
 .mobil-card:hover {
-    border-color: #d4af37;
     transform: translateY(-3px);
-}
-
-/* Tombol elegan */
-button {
-    background: #d4af37;
-    color: #0b0c10;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    background: #b6912b;
 }
 
 /* Detail spesifikasi */
@@ -88,3 +113,4 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
