@@ -35,56 +35,48 @@ header p {
     margin: auto;
 }
 
-/* Card styling */
-/* Card styling dengan animasi border */
-/* Card styling dengan animasi border berjalan */
 .mobil-card {
     position: relative;
     background: #16181f;
     padding: 20px;
     border-radius: 12px;
-    border: 2px solid #2f3137;
     overflow: hidden;
     transition: 0.3s;
 }
 
-/* Elemen animasi border */
+/* Border animasi berjalan */
 .mobil-card::before {
     content: "";
     position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 14px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #d4af37,
-        transparent
-    );
-    background-size: 200% 200%;
-    animation: rotate-border 2s linear infinite paused;
-    z-index: 2;
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: conic-gradient(#d4af37 0deg, #b6912b 90deg, transparent 180deg);
+    animation: spin-border 3s linear infinite paused;
+    transform-origin: center;
+    z-index: 0;
 }
 
-/* Saat Hover: animasi mulai berjalan */
+/* Saat hover animasi jalan */
 .mobil-card:hover::before {
     animation-play-state: running;
 }
 
-/* Posisi konten tetap di atas */
+/* Konten tetap di atas border */
 .mobil-card > * {
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 
-/* Keyframe gerakan border memutari kotak */
-@keyframes rotate-border {
-    0% { transform: rotate(0deg); opacity: 1; }
-    100% { transform: rotate(360deg); opacity: 1; }
+/* Animasi berputar mengelilingi border */
+@keyframes spin-border {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
 
 /* Tombol elegan */
 button {
@@ -125,5 +117,6 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
 
 
