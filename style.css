@@ -50,52 +50,12 @@ header p {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 12px;
-    object-position: center; /* bisa diganti center bottom kalau mau bagian bawah mobil terlihat lebih banyak */
+    object-position: center bottom;
 }
 
 .mobil-card:hover {
     border-color: #d4af37;
     transform: translateY(-3px);
-}
-
-/* Tombol elegan */
-button {
-    background: #d4af37;
-    color: #0b0c10;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    background: #b6912b;
-}
-
-/* Detail spesifikasi */
-.detail {
-    background: #1d1f27;
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 8px;
-    display: none;
-    border-left: 3px solid #d4af37;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111217;
-    color: #777;
-    margin-top: 40px;
-    font-size: 14px;
 }
 
 /* Tombol elegan */
@@ -114,24 +74,22 @@ button:hover {
     background: #b6912b;
 }
 
-/* Detail spesifikasi */
+/* Detail spesifikasi animasi */
 .detail {
     background: #1d1f27;
     margin-top: 15px;
     padding: 0 12px;
     border-radius: 8px;
     border-left: 3px solid #d4af37;
-
-    /* Animasi */
+    
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.4s ease;
+    transition: max-height .5s ease, opacity .4s ease, padding .4s ease;
 }
 
-/* Saat aktif */
 .detail.show {
-    max-height: 200px; /* Sesuaikan jika lebih tinggi */
+    max-height: 200px;
     opacity: 1;
     padding: 12px;
 }
@@ -145,8 +103,3 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
-
-
-
-
-
